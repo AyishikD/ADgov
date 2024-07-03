@@ -16,20 +16,17 @@ const Navbar = () => {
         </div>
         {/* Menu Items */}
         <div className='hidden space-x-6 md:flex'>
-          <Link to='#' className='hover:text-darkGrayishBlue'>
-            Pricing
+          <Link to='' className='hover:text-darkGrayishBlue font-bold'>
+            AADHAR
           </Link>
-          <Link to='#' className='hover:text-darkGrayishBlue'>
-            Product
+          <Link to='#' className='hover:text-darkGrayishBlue font-bold'>
+            PAN CARD
           </Link>
-          <Link to='#' className='hover:text-darkGrayishBlue'>
-            About Us
+          <Link to='#' className='hover:text-darkGrayishBlue font-bold'>
+            VOTER ID
           </Link>
-          <Link to='#' className='hover:text-darkGrayishBlue'>
-            Careers
-          </Link>
-          <Link to='#' className='hover:text-darkGrayishBlue'>
-            Community
+          <Link to='#' className='hover:text-darkGrayishBlue font-bold'>
+            PASSPORT
           </Link>
         </div>
         {/* Button */}
