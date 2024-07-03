@@ -16,16 +16,19 @@ const Navbar = () => {
         </div>
         {/* Menu Items */}
         <div className='hidden space-x-6 md:flex'>
-          <Link to='' className='hover:text-darkGrayishBlue font-bold'>
+        <Link to='/' className='hover:text-darkGrayishBlue font-bold'>
+            HOME
+          </Link>
+          <Link to='/aadhar' className='hover:text-darkGrayishBlue font-bold'>
             AADHAR
           </Link>
-          <Link to='#' className='hover:text-darkGrayishBlue font-bold'>
+          <Link to='/pancard' className='hover:text-darkGrayishBlue font-bold'>
             PAN CARD
           </Link>
-          <Link to='#' className='hover:text-darkGrayishBlue font-bold'>
+          <Link to='/voterid' className='hover:text-darkGrayishBlue font-bold'>
             VOTER ID
           </Link>
-          <Link to='#' className='hover:text-darkGrayishBlue font-bold'>
+          <Link to='/passport' className='hover:text-darkGrayishBlue font-bold'>
             PASSPORT
           </Link>
         </div>
