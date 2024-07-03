@@ -1,4 +1,4 @@
-import illustrationIntro from '../assets/images/illustration-intro.svg';
+import Flag_of_India from "../assets/images/Flag_of_India.svg"
 const Hero = () => {
   return (
     <section id='hero'>
@@ -17,7 +17,7 @@ const Hero = () => {
         </div>
         {/* Image */}
         <div className='md:w-1/2'>
-          <img src={illustrationIntro} alt='' />
+          <img src={Flag_of_India} alt='' />
         </div>
       </div>
     </section>
