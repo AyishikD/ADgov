@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route,useLocation } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Hero />
+      <ConditionalHero />
       <Routes>
         <Route path="/" element={<Services />} />
         <Route path="/aadhar" element={<Aadhar />} />
@@ -30,5 +30,14 @@ function App() {
     </Router>
   );
 }
+const ConditionalHero = () => {
+  const location = useLocation();
+  const hideHeroPaths = ['/aadhar', '/passport', '/pancard', '/drivinglicense', '/voterid', '/rationcard'];
+
+  if (hideHeroPaths.includes(location.pathname)) {
+    return null;
+  }
+  return <Hero />;
+};
 
 export default App;

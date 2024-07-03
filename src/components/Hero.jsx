@@ -1,7 +1,4 @@
-
-
 import illustrationIntro from '../assets/images/illustration-intro.svg';
-
 const Hero = () => {
   return (
     <section id='hero'>
