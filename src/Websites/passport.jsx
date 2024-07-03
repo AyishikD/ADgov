@@ -123,6 +123,19 @@ const Passport = () => {
             </p>
           </div>
         </div>
+        <div className='flex items-center'>
+          <div className='rounded-full bg-blue-200 p-4'>
+            <div className='flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full'>
+              <span className='text-white font-bold text-lg'>8</span>
+            </div>
+          </div>
+          <div className='ml-4'>
+            <h3 className='text-xl font-bold text-blue-600'>Cost</h3>
+            <p className='mt-2 text-gray-800 font-bold'>
+              The cost of making a Passport is around rupees 1500. However changes and other charges are applicable as per rules.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Passport Service Boxes */}
