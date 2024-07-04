@@ -1,11 +1,7 @@
 import { Link } from 'react-router-dom';
-
-import companyLogoWhite from '../assets/images/logo-white.svg';
-import facebookLogo from '../assets/images/icon-facebook.svg';
-import youtubeLogo from '../assets/images/icon-youtube.svg';
-import twitterLogo from '../assets/images/icon-twitter.svg';
-import pinterestLogo from '../assets/images/icon-pinterest.svg';
-import instagramLogo from '../assets/images/icon-instagram.svg';
+import React from 'react';
+import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
+import {FaXTwitter} from 'react-icons/fa6';
 
 const Footer = () => {
   return (
@@ -15,83 +11,74 @@ const Footer = () => {
         {/* Logo and social links container */}
         <div className='flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start'>
           <div className='mx-auto my-6 text-center text-white md:hidden'>
-            Copyright © 2022, All Rights Reserved
+            Copyright ©ADgov, All Rights Reserved
           </div>
           {/* Logo */}
-          <div>
-            <img src={companyLogoWhite} className='h-8' alt='' />
-          </div>
           {/* Social Links Container */}
-          <div className='flex justify-center space-x-4'>
-            {/* Link 1 */}
-            <Link to='#'>
-              <img src={facebookLogo} className='h-8' alt='' />
-            </Link>
-            {/* Link 2 */}
-            <Link to='#'>
-              <img src={youtubeLogo} className='h-8' alt='' />
-            </Link>
-            {/* Link 3 */}
-            <Link to='#'>
-              <img src={twitterLogo} className='h-8' alt='' />
-            </Link>
-            {/* Link 4 */}
-            <Link to='#'>
-              <img src={pinterestLogo} className='h-8' alt='' />
-            </Link>
-            {/* Link 5 */}
-            <Link to='#'>
-              <img src={instagramLogo} className='h-8' alt='' />
-            </Link>
+          <div className='flex justify-evenly space-x-4 '>
+            <a href='https://x.com/AYISHIKDAS07' target='_blank' rel='noopener noreferrer'>
+              <FaXTwitter className='h-8 w-8 text-white hover:text-brightRed' />
+            </a>
+            <a href='https://www.instagram.com/silent____whispers/' target='_blank' rel='noopener noreferrer'>
+              <FaInstagram className='h-8 w-8 text-white hover:text-brightRed' />
+            </a>
+            <a href='https://github.com/AyishikD/ADgov' target='_blank' rel='noopener noreferrer'>
+              <FaGithub className='h-8 w-8 text-white hover:text-brightRed' />
+            </a>
+            <a href='https://www.linkedin.com/in/ayishik-das/' target='_blank' rel='noopener noreferrer'>
+              <FaLinkedin className='h-8 w-8 text-white hover:text-brightRed' />
+            </a>
+          </div>
+          <div className='hidden text-white md:block mr-5'>
+            Copyright ©ADgov, All Rights Reserved
           </div>
         </div>
+
         {/* List Container */}
         <div className='flex justify-around space-x-32'>
           <div className='flex flex-col space-y-3 text-white'>
-            <Link to='#' className='hover:text-brightRed'>
-              Home
+            <Link to='/aadhar' className='hover:text-brightRed'>
+              Aadhar Card
             </Link>
-            <Link to='#' className='hover:text-brightRed'>
-              Pricing
+            <Link to='/pancard' className='hover:text-brightRed'>
+              Pan Card
             </Link>
-            <Link to='#' className='hover:text-brightRed'>
-              Products
-            </Link>
-            <Link to='#' className='hover:text-brightRed'>
-              About
+            <Link to='/drivinglicense' className='hover:text-brightRed'>
+              Driving License
             </Link>
           </div>
           <div className='flex flex-col space-y-3 text-white'>
-            <Link to='#' className='hover:text-brightRed'>
-              Careers
+            <Link to='/passport' className='hover:text-brightRed'>
+              Passport
             </Link>
-            <Link to='#' className='hover:text-brightRed'>
-              Community
+            <Link to='/rationcard' className='hover:text-brightRed'>
+              Ration Card
             </Link>
-            <Link to='#' className='hover:text-brightRed'>
-              Privacy Policy
+            <Link to='/voterid' className='hover:text-brightRed'>
+              Voter ID Card
             </Link>
           </div>
         </div>
 
         {/* Input Container */}
-        <div className='flex flex-col justify-between'>
-          <form>
-            <div className='flex space-x-3'>
-              <input
-                type='text'
-                className='flex-1 px-4 rounded-full focus:outline-none'
-                placeholder='Updated in your inbox'
-              />
-              <button className='px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none'>
-                Go
-              </button>
-            </div>
+        {/* Input Container */}
+        <div className='flex flex-col justify-between ml-5'>
+          <form className='flex flex-col space-y-3'>
+            <input
+              type='text'
+              className='px-4 py-2 rounded-full focus:outline-none'
+              placeholder='Add your complaints'
+            />
+            <button className='px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none'>
+              Submit
+            </button>
           </form>
-          <div className='hidden text-white md:block'>
-            Copyright © 2022, All Rights Reserved
-          </div>
         </div>
+      </div>
+
+      {/* Copyright Container */}
+      <div className='mt-6 text-center text-white md:hidden'>
+        Copyright ©ADgov, All Rights Reserved
       </div>
     </div>
   );
