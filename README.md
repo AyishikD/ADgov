@@ -30,7 +30,7 @@ Follow these instructions to set up the project locally.
 
 1. Clone the repository:
 ```sh
-   git clone https://github.com/yourusername/ADgov.git
+   git clone https://github.com/AyishikD/ADgov.git
 ```
 2. Navigate to the project directory:
 ```sh
