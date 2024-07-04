@@ -11,7 +11,7 @@ const Footer = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/complaints', { complaint });
+      const response = await axios.post('https://adgov.vercel.app/api/complaints', { complaint });
       console.log('Complaint submitted:', response.data);
       setComplaint(''); // Clear the input field
     } catch (error) {
