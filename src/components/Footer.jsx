@@ -1,9 +1,23 @@
 import { Link } from 'react-router-dom';
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
 
 const Footer = () => {
+  const [complaint, setComplaint] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:5000/api/complaints', { complaint });
+      console.log('Complaint submitted:', response.data);
+      setComplaint(''); // Clear the input field
+    } catch (error) {
+      console.error('Error submitting complaint:', error);
+    }
+  };
   return (
     <div className='bg-veryDarkBlue'>
       {/* Flex Container */}
@@ -61,21 +75,22 @@ const Footer = () => {
         </div>
 
         {/* Input Container */}
-        {/* Input Container */}
         <div className='flex flex-col justify-between ml-5'>
-          <form className='flex flex-col space-y-3'>
+          <form className='flex flex-col space-y-3' onSubmit={handleSubmit}>
             <input
               type='text'
               className='px-4 py-2 rounded-full focus:outline-none'
               placeholder='Add your complaints'
+              value={complaint}
+              onChange={(e) => setComplaint(e.target.value)}
             />
-            <button className='px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none'>
+            <button type='submit' className='px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none'>
               Submit
             </button>
           </form>
         </div>
       </div>
-
+      
       {/* Copyright Container */}
       <div className='mt-6 text-center text-white md:hidden'>
         Copyright ©ADgov, All Rights Reserved
